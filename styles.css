@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    }
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Bitter', serif; 
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif; 
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+.nav-menu .contact-btn {
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-menu .contact-btn:hover {
+    background-color: white;
+    color: #000; 
+}
+
+/* Hero секція */
+.hero {
+    height: 85vh;
+    background-image: url('./img/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative;
+    color: rgb(193, 226, 241);
+    padding: 2rem;
+    text-align: center; 
+    margin-left: 0; 
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; 
+    letter-spacing: 2px; 
+    margin-bottom: 1.5rem; 
+    font-family: 'Bitter', serif;
+}
+
+.hero-content p {
+    font-size: 1.5rem; 
+    letter-spacing: 3px; 
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.about-section {
+    margin-top: 3rem;
+    padding: 0 0 5rem 0; 
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content h2 {
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Skills секція */
+.skills-section {
+    margin-top: 4rem;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: nowrap;
+}
+
+.logo-container img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    mix-blend-mode: multiply;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
+.logo-container img[alt="Logo 5"] {
+    height: 100px !important;
+}
+
+.logo-container img[alt="Logo 6"] {
+    height: 100px !important;
+}
+
+.logo-container img[alt="Logo 7"] {
+    height: 150px !important;
+}
+
+.logo-container img[alt="Logo 8"] {
+    height: 130px !important;
+}
+
+/* Projects секція */
+.projects-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.projects-content h2 {
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-family: 'Bitter', serif;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.contact-section {
+    padding: 2rem 0;  
+    background-color: #bdc1c5;  
+    border-top: 1px solid #dee2e6; 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links img {
+    width: 40px;  
+    height: 40px;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+}
