@@ -151,16 +151,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    flex-wrap: nowrap;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .logo-container img {
-    height: 150px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
     mix-blend-mode: multiply;
+    flex: 0 0 auto;
 }
 
 .logo-container img:hover {
@@ -168,19 +172,19 @@ body {
 }
 
 .logo-container img[alt="Logo 5"] {
-    height: 100px !important;
+    height: 70px !important;
 }
 
 .logo-container img[alt="Logo 6"] {
-    height: 100px !important;
+    height: 70px !important;
 }
 
 .logo-container img[alt="Logo 7"] {
-    height: 150px !important;
+    height: 100px !important;
 }
 
 .logo-container img[alt="Logo 8"] {
-    height: 130px !important;
+    height: 90px !important;
 }
 
 /* Projects секція */
@@ -309,22 +313,23 @@ body {
 
 @media (max-width: 1200px) {
     .logo-container {
-        gap: 2rem;
+        gap: 1.5rem;
+        max-width: 800px;
     }
-
+    
     .logo-container img {
-        height: 120px;
+        height: 70px;
     }
 }
 
 @media (max-width: 768px) {
     .logo-container {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 1rem;
+        max-width: 600px;
     }
-
+    
     .logo-container img {
-        height: 100px;
+        height: 60px;
     }
 }
 
@@ -382,5 +387,9 @@ body {
 
     .nav-menu a {
         font-size: 0.9rem;
+    }
+
+    .logo-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
